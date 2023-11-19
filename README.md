@@ -46,7 +46,42 @@ Snapshots:   0 total
 Time:        0.218 s
 Ran all test suites.
 ```
-## Step3: Export the Unit Test
-*   Happy Path: refers to the normal, positive case scenario where the function is used as intended with valid inputs.
-*   Unhappy Path: which cover negative, edge case, error, or invalid input scenarios.
-*       s
+## Step3: Export the Happy Path and Unhappy Paths
+*   Happy Path: focuses on the ideal, expected scenario where everything goes as planned. This type of testing ensures that the software works as intended under normal conditions.
+*   Unhappy Paths: refers to testing scenarios where things go wrong. This type of testing is designed to ensure that the software gracefully handles error conditions, invalid inputs, or unexpected user behavior.
+1. In this case: add function, we need to think about unexpected scenarios of this function (In real word usually base on requirement).
+    - Invalid Inputs: test inputs are valid
+    - Edge Case: extremely large numbers, negative numbers
+2.  Modify the add.test.js: We can use the **describe** function which used to group together related test cases within a test suite.
+3. Run Jest after modify the add.test.js:
+```
+npm test
+```
+You should see the Tests: 1 failed, 7 passed, 8 total:
+```
+Tests:       1 failed, 7 passed, 8 total
+```
+Scroll up the test, you can see the failed message:
+```
+ ● add function tests › should return NaN when one of the inputs is a string
+
+    expect(received).toBeNaN()
+
+    Received: "1a"
+
+      14 |     // using Jest to unhappy path test: Invalid Inputs
+      15 |     test('should return NaN when one of the inputs is a string', () => {
+    > 16 |         expect(add(1, 'a')).toBeNaN();
+         |                             ^
+      17 |         expect(add('a', 1)).toBeNaN();
+      18 |     });
+      19 |
+```
+4. Because JavaScript attempts to convert the number 1 to a string and then performs string concatenation. So, '1' + 'a' results in the string '1a'.
+Test expect return NaN, not string, in this case we can modify the test or code, for the best practice, we should modify the code.
+5. Run Jest again:
+```
+npm test
+```
+You should see all tests are passed.
+
