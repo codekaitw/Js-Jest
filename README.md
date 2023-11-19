@@ -1,6 +1,9 @@
 # JS-Jest
  Unit Test via Jest for presentation
 
+ ## Step 0: Install Node.js
+ Jest is a Node.js-based testing framework, so you need to have Node.js installed on your system. You can download and install Node.js from the official website: https://nodejs.org/
+
  ## Step 1: Set Up
  1. Initial the package.json using below command on terminal:
  ```shell
