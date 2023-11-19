@@ -16,5 +16,26 @@
     "test": "jest"
   }
 
-  ## Step 2: Write functions to test
-  1. create a file call calculator.js to write a function to test
+  ## Step 2: Write a function to test
+  1. Create a file call add.js to write a function to test
+
+  2. Write a first function call "add" to return a result of add two numbers and export the function
+
+  3. Create a file call add.test.js to test the add.js function
+
+  4. Run the Jest by using:
+  ```npm test```
+
+  ```
+  > js-jest@1.0.0 test
+> jest
+
+ PASS  ./add.test.js
+  ✓ adds 1 + 2 to equal 3 (2 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        0.218 s
+Ran all test suites.
+  ```
