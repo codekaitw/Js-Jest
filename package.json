@@ -4,7 +4,7 @@
   "description": "JavaScript Unit Test via Jest for presentation",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --watchAll"
   },
   "author": "",
   "license": "MIT",

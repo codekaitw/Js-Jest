@@ -15,37 +15,35 @@
  ```
  "devDependencies": {
     "jest": "^29.7.0"
-  }
-  ```
-  4. In order to run the Jest, we need to change the test string which inside the scripts to "jest"
-  ```
+ }
+ ```
+ 4. In order to run the Jest, we need to change the test string which inside the scripts to "jest"
+ ```
   "scripts": {
     "test": "jest"
-  }
-  ```
-  ## Step 2: Write a function to test
-  1. Create a file call add.js to write a function to test
-
-  2. Write a first function call "add" to return a result of add two numbers and export the function
-
-  3. Create a file call add.test.js to test the add.js function (import the add function)
-
-  4. Run the Jest by using below command on terminal:
-  ```shell
-  npm test
-  ```
-  The result in terminal should like below if the test passed:
-  ```  > js-jest@1.0.0 test
-> jest
+ }
+ ```
+ ## Step 2: Write a function to test
+ 1. Create a file call add.js to write a function to test
+ 2. Write a first function call "add" to return a result of add two numbers and export the function
+ 3. Create a file call add.test.js to test the add.js function (import the add function)
+ 4. Run the Jest by using below command on terminal:
+ ```shell
+ npm test
+ ```
+ The result in terminal should like below if the test passed:
+ ```  > js-jest@1.0.0 test
+ > jest
 
  PASS  ./add.test.js
   ✓ adds 1 + 2 to equal 3 (2 ms)
 
-Test Suites: 1 passed, 1 total
-Tests:       1 passed, 1 total
-Snapshots:   0 total
-Time:        0.218 s
-Ran all test suites.```
+  Test Suites: 1 passed, 1 total
+  Tests:       1 passed, 1 total
+  Snapshots:   0 total
+  Time:        0.218 s
+  Ran all test suites.
+```
 ## Step 3: Export the Happy Path and Unhappy Paths
 *   Happy Path: focuses on the ideal, expected scenario where everything goes as planned. This type of testing ensures that the software works as intended under normal conditions.
 *   Unhappy Paths: refers to testing scenarios where things go wrong. This type of testing is designed to ensure that the software gracefully handles error conditions, invalid inputs, or unexpected user behavior.
@@ -94,5 +92,18 @@ npm test
 ```
 4. Check the result: notice that the Test Suites is 2 passed now, because it tested two test group (**describe**).
 
-## Step 5: Auto Test
-1. In order to test automatically, we can use below command 
+## Step 5: Export Jest - Auto Test
+1. In order to test automatically, we can modify the test string inside script (package.json):
+```
+"scripts": {
+    "test": "jest --watchAll"
+  },
+```
+2. Run Jest to start the auto test:
+```shell
+npm test
+```
+3. You should see the test is watching, when you saved/added/deleted the file.
+```
+Watch Usage: Press w to show more.
+```
