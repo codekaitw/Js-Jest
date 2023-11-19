@@ -44,7 +44,7 @@
   Time:        0.218 s
   Ran all test suites.
 ```
-## Step 3: Export the Happy Path and Unhappy Paths
+## Step 3: Explore the Happy Path and Unhappy Paths
 *   Happy Path: focuses on the ideal, expected scenario where everything goes as planned. This type of testing ensures that the software works as intended under normal conditions.
 *   Unhappy Paths: refers to testing scenarios where things go wrong. This type of testing is designed to ensure that the software gracefully handles error conditions, invalid inputs, or unexpected user behavior.
 1. In this case: add function, we need to think about unexpected scenarios of this function (In real word usually base on requirement).
@@ -77,7 +77,7 @@ Scroll up the test, you can see the failed message:
 ```
 4. Because JavaScript attempts to convert the number 1 to a string and then performs string concatenation. So, '1' + 'a' results in the string '1a'.
 Test expect return NaN, not string, in this case we can modify the test or code, for the best practice, we should modify the code.
-5. Run Jest again:
+5. Run Jest again after modified the code of add.js:
 ```shell
 npm test
 ```
@@ -92,7 +92,7 @@ npm test
 ```
 4. Check the result: notice that the Test Suites is 2 passed now, because it tested two test group (**describe**).
 
-## Step 5: Export Jest - Auto Test
+## Step 5: Explore Jest - Auto Test
 1. In order to test automatically, we can modify the test string inside script (package.json):
 ```
 "scripts": {
