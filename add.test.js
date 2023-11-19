@@ -7,10 +7,6 @@ describe('add function tests', () => {
         expect(add(1, 2)).toBe(3);
     });
 
-    test('adds -2 + -5 to equal -7', () => {
-        expect(add(-2, -5)).toBe(-7);
-    });
-
     // using Jest to unhappy path test: Invalid Inputs
     test('should return NaN when one of the inputs is a string', () => {
         expect(add(1, 'a')).toBeNaN();
@@ -31,6 +27,10 @@ describe('add function tests', () => {
     });
 
     // using Jest to unhappy path test: Edge Cases
+    test('adds -2 + -5 to equal -7', () => {
+        expect(add(-2, -5)).toBe(-7);
+    });
+    
     test('should handle Infinity properly', () => {
         expect(add(Infinity, 1)).toBe(Infinity);
         expect(add(-Infinity, 1)).toBe(-Infinity);

@@ -8,4 +8,6 @@ const add = (num1, num2) => {
     const result = num1 + num2;
     return result;
 };
+// // test manually
+// console.log(add(1, 3));
 module.exports = add;
