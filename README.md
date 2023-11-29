@@ -7,7 +7,7 @@
  ## Step 1: Set Up
  1. Initial the package.json using below command on terminal:
  ```shell
- npm init-y
+ npm init -y
  ```
  2. Install the Jest library using below command on terminal:
  ```shell
